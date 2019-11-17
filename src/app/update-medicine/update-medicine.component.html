@@ -1,0 +1,24 @@
+<div style="text-align:center">
+    <h3>Update Medicine</h3>
+</div>
+
+<div [hidden]="submitted" style="width:90%;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Medicine Name</label>
+      <input type="text" class="form-control" id="firstName" required [(ngModel)]="medicine.name" name="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Mfg Date</label>
+      <input type="text" class="form-control" id="lastName" required [(ngModel)]="medicine.mfgdate" name="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Exp Date</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="medicine.expdate" name="emailId">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

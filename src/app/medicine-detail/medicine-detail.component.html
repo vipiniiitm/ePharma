@@ -1,0 +1,21 @@
+<h2>Medicine Details</h2> 
+
+<hr/>
+<div *ngIf="medicine">
+    <div>
+        <label><b>ID: </b></label> {{medicine.id}}
+      </div>
+  <div>
+    <label><b>Name: </b></label> {{medicine.name}}
+  </div>
+  <div>
+    <label><b>Mfgdate: </b></label> {{medicine.mfgdate}}
+  </div>
+  <div>
+    <label><b>Expdate: </b></label> {{medicine.expdate}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Medicine List</button><br>

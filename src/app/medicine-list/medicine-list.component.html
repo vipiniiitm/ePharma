@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <div style="text-align:center"> <h2>Medicine List</h2></div>
+   
+  </div>
+  <div class="panel-body table-responsive ">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mfg Date</th>
+          <th>Exp Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicin of medicine | async">
+          <td>{{medicin.name}}</td>
+          <td>{{medicin.mfgdate}}</td>
+          <td>{{medicin.expdate}}</td>
+          <td><button (click)="deleteMedicine(medicin.id)" class="btn btn-danger"  style="margin-left: 10px;margin-top:2px;">Delete</button>
+            <button (click)="updateMedicine(medicin.id)" class="btn btn-info" style="margin-left: 10px;margin-top:2px;">Update</button>
+              <button (click)=" medicineDetails(medicin.id)" class="btn btn-info" style="margin-left: 10px;margin-top:2px;">Details</button>
+              <button (click)=" clone(medicin)" class="btn btn-info" style="margin-left: 10px;margin-top:2px;">Clone</button>
+          </td>
+        </tr>
+   
+      </tbody>
+    </table>
+  </div>
+</div>
